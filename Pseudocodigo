@@ -2,30 +2,28 @@
 ##Ejecutar persistentemente!
 ##Verficar los puertos USB cada 5 segundos
 Entrada de un dispositivo 
-Si (Lista_negra y lista_blanca estan vacias o Entrada no esta en lista blanca ni negra){
+Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni Lista_negra){ #Primera insercion del USB
     Imprimir “Esta seguro de permitir el acceso al dispositivo insertado;podria ser un virus o algo peor”
     Recibir Si/No
     Si (Respuesta=Si)
        Agregar a lista blanca
        Montar dispositivo
-Si no 
-     Agregar a la lista negra
-     Fin del programa
-}Si no 
-	Si(Entrada está en lista blanca)
+    Si no 
+     	Agregar a la lista negra
+     	Fin del programa
+}Si no{
+	Si(Entrada está en Lista_blanca)
 		Montar 
-		Salir
 	Sino  
-Imprimir “Esta seguro de permitir el acceso al dispositivo  insertado;podria ser un virus o algo peor”
-Recibir Si/No
-Si (Respuesta=si)
-	Borra de lista negra
-	Agregar a lista blanca
-	Montar 
-Salir
-Sino 
-	Salir.
-	
-Fin
+	Imprimir “Esta seguro de permitir el acceso al dispositivo  insertado; podria ser un virus o algo peor”
+	Recibir Si/No
+	Si (Respuesta=si)
+		Borra de lista negra
+		Agregar a lista blanca
+		Montar 
+	Sino 
+		Salir.
+}
+Fin del programa
 
 
