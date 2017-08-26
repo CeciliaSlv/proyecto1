@@ -1,4 +1,6 @@
 # Pseudocodigo firewall
+##Ejecutar persistentemente!
+##Verficar los puertos USB cada 5 segundos
 Entrada de un dispositivo 
 Si (Lista_negra y lista_blanca estan vacias o Entrada no esta en lista blanca ni negra){
     Imprimir “Esta seguro de permitir el acceso al dispositivo insertado;podria ser un virus o algo peor”
