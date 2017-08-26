@@ -19,7 +19,7 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 	Si(Entrada está en Lista_blanca)
 		Montar 
 	Sino  
-	Imprimir “Esta seguro de permitir el acceso al dispositivo  insertado; podria ser un virus o algo peor”
+	echo “Esta seguro de permitir el acceso al dispositivo  insertado ; podria ser un zombie o algo peor”
 	Recibir Si/No
 	Si (Respuesta=si)
 		Borra de Lista_negra
