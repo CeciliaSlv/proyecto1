@@ -4,8 +4,8 @@
 ##Verficar los puertos USB cada 5 segundos
 Entrada de un dispositivo 
 Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni Lista_negra){ #Primera insercion del USB
-    echo “Esta seguro de permitir el acceso al dispositivo insertado, podria ser un virus o algo peor”
-    Recibir Si/No
+    echo -e “Esta seguro de permitir el acceso al dispositivo insertado, podria ser un virus o algo peor\n Escoge Si o No”
+    read respuesta
     Si (Respuesta=Si)
        echo "Se agrego a la lista blanca"
        Agregar a lista blanca
