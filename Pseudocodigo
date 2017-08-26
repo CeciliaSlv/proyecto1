@@ -1,2 +1,4 @@
 #Este pseudocodigo nos dará una idea de como ser el flujo de ejecucion del programa y que conceptos debemos buscar
+Entra el dispositivo
+Si (Lista_negra y lista_blanca estan vacias O Entrada no esta en lista blanca ni negra){
 
