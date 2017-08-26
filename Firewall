@@ -3,18 +3,19 @@
 ##Ejecutar persistentemente!
 ##Verficar los puertos USB cada 5 segundos
 Entrada de un dispositivo 
+Crear Lista_blanca y Lista_negra 
 if [ Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni Lista_negra ]; then #Primera insercion del USB
     echo “Esta seguro de permitir el acceso al dispositivo insertado, podria ser un virus o algo peor.”
     echo "Escoge Si o No"
     read respuesta
     if [ $respuesta = 'Si' ]; then
        echo "Se agrego a la lista blanca"
-       Agregar a lista blanca
+       cat /etc/mtab | grep media >> whitelist.sh
        Montar dispositivo
     else 
     	echo "Se agrego a la lista negra, lo que significa que no se ejecutara"
 	No montar
-     	Agregar a la lista negra
+     	cat /etc/mtab | grep media >> blacklist.sh
     fi
 elif [ Entrada está en Lista_blanca ]; then #Mas de una insercion
 		Montar 
