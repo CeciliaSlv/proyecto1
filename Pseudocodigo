@@ -12,7 +12,7 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 	No montar
      	Agregar a la lista negra
      
-}Si no{
+}Si no{ #Mas de una insercion
 	Si(Entrada está en Lista_blanca)
 		Montar 
 	Sino  
