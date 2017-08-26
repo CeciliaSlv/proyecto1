@@ -23,12 +23,13 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 	echo “Esta seguro de permitir el acceso al dispositivo  insertado ; podria ser un zombie o algo peor”
 	echo "Escoge Si o No"
 	read res
-	if [
+	if [ $res = 'Si' ]; then
 		Borra de Lista_negra
 		Agregar a Lista_blanca
 		Montar 
-	Sino 
+	else
 		No montar
+	fi
 }
 Fin del programa
 #Aqui ya hay que poner el codigo no?
