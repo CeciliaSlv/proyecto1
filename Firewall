@@ -3,7 +3,7 @@
 ##Ejecutar persistentemente!
 ##Verficar los puertos USB cada 5 segundos
 Entrada de un dispositivo 
-Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni Lista_negra){ #Primera insercion del USB
+if [ Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni Lista_negra ]; then #Primera insercion del USB
     echo “Esta seguro de permitir el acceso al dispositivo insertado, podria ser un virus o algo peor.”
     echo "Escoge Si o No"
     read respuesta
@@ -16,10 +16,9 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 	No montar
      	Agregar a la lista negra
     fi
-}Si no{ #Mas de una insercion
-	Si(Entrada está en Lista_blanca)
+elif [ Entrada está en Lista_blanca ]; then #Mas de una insercion
 		Montar 
-	Sino  
+	else  
 	echo “Esta seguro de permitir el acceso al dispositivo  insertado ; podria ser un zombie o algo peor”
 	echo "Escoge Si o No"
 	read res
@@ -30,7 +29,8 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 	else
 		No montar
 	fi
-}
+	fi
+
 Fin del programa
 #Aqui ya hay que poner el codigo no?
 #pues estaba pensando en encimarlo 
