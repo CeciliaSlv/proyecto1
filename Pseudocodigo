@@ -1,3 +1,12 @@
 Pseudocodigo firewall
 Entrada de un dispositivo 
+Si (Lista_negra y lista_blanca estan vacias o Entrada no esta en lista blanca ni negra){
+    Imprimir “Esta seguro de permitir el acceso al dispositivo insertado;podria ser un virus o algo peor”
+    Recibir Si/No
+    Si (Respuesta=Si)
+       Agregar a lista blanca
+       Montar dispositivo
+Si no 
+     Agregar a la lista negra
+     
 
