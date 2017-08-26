@@ -9,8 +9,9 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
        Agregar a lista blanca
        Montar dispositivo
     Si no 
+	No montar
      	Agregar a la lista negra
-     	Fin del programa
+     
 }Si no{
 	Si(Entrada está en Lista_blanca)
 		Montar 
@@ -22,7 +23,7 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 		Agregar a Lista_blanca
 		Montar 
 	Sino 
-		Salir.
+		No montar
 }
 Fin del programa
 
