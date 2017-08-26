@@ -18,8 +18,8 @@ Si (Lista_negra y Lista_blanca estan vacias o Entrada no esta en Lista_blanca ni
 	Imprimir “Esta seguro de permitir el acceso al dispositivo  insertado; podria ser un virus o algo peor”
 	Recibir Si/No
 	Si (Respuesta=si)
-		Borra de lista negra
-		Agregar a lista blanca
+		Borra de Lista_negra
+		Agregar a Lista_blanca
 		Montar 
 	Sino 
 		Salir.
