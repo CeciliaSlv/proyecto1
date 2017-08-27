@@ -1,0 +1,21 @@
+#!/bin/bash
+##
+#El Punto del firewall es que la USB NO debe estar montada. 
+#Porque al montarse, automaticamente el usuario queda vulnerado, por ello
+#Deseactivamos los siguientes servicios.
+#       Automontado
+#       Auto-apertura
+
+
+gsettings set org.gnome.desktop.media-handling automount-open true
+#Este comando evita la autoapertura de la carpeta en donde se monto la USB
+gsettings set org.gnome.desktop.media-handling automount false
+#Este comando evita el automontado de la USB
+cd /home/
+cd /USER/
+mkdir usb1
+while [ 1 ]; do #Simulando presistencia con un while infinito
+        cup=$(lsblk | grep "sd*[b-z]1")
+        #Busca si hay alguna USB conectada y la guarda en la variabe cup
+        er=""
+        if [ "$cup" != "$er" ]; then    
