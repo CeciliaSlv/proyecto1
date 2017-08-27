@@ -26,27 +26,24 @@ while [ 1 ]; do #Simulando presistencia con un while infinito
   if [ "$cup" != "$er" ]; then    
   #Compara la cadena que tiene informacion de las USB con una cadena vacia
     echo "ALERTA! SE HA CONECTADO UNA USB A '$USER', QUE DESEA HACER:"
-		echo "1) Montarla"
-		echo "2) Enviar a la lista negra"
-		echo "3) NO hacer nada" 
-		echo -n "OP> "
-		read opcion
-			case $opcion in
-				1 ) sudo mount /dev/sdb1 /home/$USER/usb 
-					if [ $? -eq 0 ]; then
-						echo -e "Se monto correctamente\n"
-					fi ;;
-			esac
-	else
-		echo -e "NO hay USB\n"
-	fi
-	sleep 2
+    echo "1) Montarla"
+    echo "2) Enviar a la lista negra"
+    echo "3) NO hacer nada" 
+    echo -n "OP> "
+    read opcion
+    	case $opcion in
+		1 ) sudo mount /dev/sdb1 /home/$USER/usb 
+			if [ $? -eq 0 ]; then
+				echo -e "Se monto correctamente\n"
+			fi ;;
+	esac
+  else
+  	echo -e "NO hay USB\n"
+  fi
+  sleep 2
 done
-####	Necesitamos enviar a la lista negra y verificar ue no este en la lista negra!
+####	Necesitamos enviar a la lista negra y verificar que no este en la lista negra!
 ####	Probablemente necesitamos un cronometro.
-####	Buscar que parametros se necesitan para montar un USB
-##		Demonizar---> Podemos intentar con 
-#		Si hay tiempo crear un script que descative el automontado 
-#		SI NO especificar en el manual
+###	Demonizar---> Podemos intentar con 
 #https://blog.desdelinux.net/script-para-espiar-el-contenido-de-dispositivos-usb-y-copiarlo-a-la-pc/
-#Interfaz grafica = Cecilia
+#	Interfaz grafica = Cecilia
