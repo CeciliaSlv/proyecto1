@@ -34,11 +34,11 @@ while [ 1 ]; do #Simulando presistencia con un while infinito
 			case $opcion in
 				1 ) sudo mount /dev/sdb1 /home/$USER/usb 
 					if [ $? -eq 0 ]; then
-						echo "Se monto correctamente"
+						echo -e "Se monto correctamente\n"
 					fi ;;
 			esac
 	else
-		echo "NO hay USB"
+		echo -e "NO hay USB\n"
 	fi
 	sleep 2
 done
