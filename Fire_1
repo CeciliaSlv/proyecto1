@@ -6,8 +6,7 @@
 #	@brief Script para controlar el montaje de dispositivos USB
 
 #El Punto del firewall es que la USB NO debe estar montada. 
-#Porque al montarse, automaticamente el usuario queda vulnerado, por ello
-#Deseactivamos los siguientes servicios el AUTOMONTADO
+#Porque al montarse, automaticamente el usuario queda vulnerado, por ello deseactivamos el AUTOMONTADO
 
 gsettings set org.gnome.desktop.media-handling automount false
 #Este comando evita el automontado de la USB
