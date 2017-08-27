@@ -1,18 +1,28 @@
 #!/bin/bash
-##
+
+#	@file FIREWALL.sh
+#	@Author Francisco Pablo, Rodrigo (14) && Cecilia (n) F.I. Ing. Computación
+#	@date 26/08/17
+#	@brief Script para controlar el montaje de dispositivos USB
+
+
+
 #El Punto del firewall es que la USB NO debe estar montada. 
 #Porque al montarse, automaticamente el usuario queda vulnerado, por ello
 #Deseactivamos los siguientes servicios.
 #       Automontado
 #       Auto-apertura
 
-gsettings set org.gnome.desktop.media-handling automount-open true
-#Este comando evita la autoapertura de la carpeta en donde se monto la USB
 gsettings set org.gnome.desktop.media-handling automount false
 #Este comando evita el automontado de la USB
-cd /home/
-cd /USER/
-mkdir usb1
+gsettings set org.cinnamon.desktop.media-handling automount false
+#Por si estamos en MINT
+gsettings set org.gnome.desktop.media-handling automount-open true
+#Este comando evita la autoapertura de la carpeta en donde se monto la USB en LINUX UBUNTU
+gsettings set org.cinnamon.desktop.media-handling automount-open true
+#Por si estamos en MINT
+
+mkdir /home/$USER/usb  #Crear la carpeta si es la primera vez
 while [ 1 ]; do #Simulando presistencia con un while infinito
   cup=$(lsblk | grep "sd*[b-z]1")
   #Busca si hay alguna USB conectada y la guarda en la variabe cup
