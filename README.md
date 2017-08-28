@@ -3,7 +3,7 @@ Primer proyecto de linux
 
 
 #	@file firewall.sh,fwusb.sh, execute.sh, Blacklist.txt, Whitelist.txt
-#	@Author Francisco Pablo, Rodrigo (14) && Cecilia (n) F.I.
+#	@Author Francisco Pablo, Rodrigo && Cecilia Silva Sandoval F.I.
 #  Ing. Computación
 #  PROTECO
 #  PROTECO GENERACION 35
