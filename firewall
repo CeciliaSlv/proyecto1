@@ -1,8 +1,11 @@
 #!/bin/bash
 #	@file FIREWALL.sh
-#	@Author Francisco Pablo, Rodrigo (14) && Cecilia (n) F.I. Ing. Computación PROTECO
+#	@Author Francisco Pablo, Rodrigo (14) && Cecilia (n) F.I.
+#  	Ing. Computación
+#  	PROTECO GENERACION 35
 #	@date 26/08/17
 #	@brief Script para controlar el montaje de dispositivos USB
+
 
 #El Punto del firewall es que la USB NO debe estar montada. 
 #Al montarse automaticamente el usuario queda vulnerado, por ello deseactivamos el AUTOMONTADO
