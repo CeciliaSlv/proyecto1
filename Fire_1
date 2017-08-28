@@ -49,23 +49,50 @@ while [ 1 ]; do #Simulando presistencia con un while infinito
      	    1) Montarla
      	    2) Enviar a la lista negra 
      	    3) Salir ")
-	    
-###-----------------------------------------------------------------------------------------------------##
-###-----------------------------------------------------------------------------------------------------##
-    read opcion
-    	case $opcion in
-		1 ) sudo mount /dev/sdb1 /home/$USER/usb 
-			if [ $? -eq 0 ]; then
-				echo -e "Se monto correctamente\n"
-			fi ;;
-	esac
+	    case $opcion in
+
+                        1 )     echo $USBSERIAL >> Whitelist.txt
+                                sudo mount /dev/sdb1 /home/$USER/usb 
+                                        zenity --info \
+                                        --text="El dispositivo se monto correctamente"
+                                        break;;
+                        2)      echo $USBSERIAL >> Blacklist.txt 
+                                #if [$?==0 ]; then 
+                                        zenity --info \
+                                        --text="La USB ha sido agregada a la lista negra"
+                                break
+                                ;;
+                        3)      zenity --info \
+                                --text="La USB no sera monatada"
+                                break
+                                exit;;
+             esac
+     else
+                zenity --warning \
+                --text="La USB $USBNAME esta voletinada como PELIGROSA."
+                opcion=$( zenity --width=320 --height=220 --title=Firewall --entry --text="¿Desea desbloquearla? 
+            Si 
+            No ")
+                case $opcion in
+                        Si )
+                                sed -i '/[$USBSERIAL]/d' Blacklist.txt
+				echo $USBSERIAL >> Whitelist.txt
+                                zenity --info \
+                                        --text="USB DESBLOQUEADA" break
+                                exit;;
+
+                        No )    zenity --info \
+                                --text="La USB seguira voletinada como PELIGROSA"
+                                break
+                                exit;;  
+                esac
+        fi
   else
-  	echo -e "NO hay USB\n"
-  fi
-  sleep 2
+        zenity --info \
+        --text="No hay USB; inserte un dispositivo"
+ fi
+ sleep 2
 done
-####	Necesitamos enviar a la lista negra y verificar que no este en la lista negra!
-####	Probablemente necesitamos un cronometro.
-###	Demonizar---> Podemos intentar con 
+###             Demonizar---> Podemos intentar con 
 #https://blog.desdelinux.net/script-para-espiar-el-contenido-de-dispositivos-usb-y-copiarlo-a-la-pc/
-#	Interfaz grafica = Cecilia
+
