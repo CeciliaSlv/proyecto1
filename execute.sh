@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo su
+cp fwusb.sh /etc/init.d/
+chmod ug+x /etc/init.d/fwusb.sh
+ln -s /etc/init.d/fwusb.sh /etc/rc3.d/S30fwusb.sh
+ln -s /etc/init.d/fwusb.sh /etc/rc6.d/K05fwusb.sh
+ln -s /etc/init.d/fwusb.sh /etc/rc0.d/K05fwusb.sh
+exit
