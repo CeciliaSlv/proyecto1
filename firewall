@@ -16,7 +16,7 @@ gsettings set org.gnome.desktop.media-handling automount false
 #Por si estamos en MINT
 gsettings set org.gnome.desktop.media-handling automount-open true
 #Auto-apertura de la USB LINUX UBUNTU
-#gsettings set org.cinnamon.desktop.media-handling automount-open true
+gsettings set org.cinnamon.desktop.media-handling automount-open true
 #Por si estamos en MINT
 
 if [ ! -d /home/$USER/usb ]; then	
@@ -92,10 +92,8 @@ while [ 1 ]; do #Simulando presistencia con un while infinito
         fi
   else
         zenity --info \
-        --text="No hay USB; inserte un dispositivo"
+        --text="No hay USB; Inserte un dispositivo"
  fi
  sleep 2
 done
-###             Demonizar---> Podemos intentar con 
-#https://blog.desdelinux.net/script-para-espiar-el-contenido-de-dispositivos-usb-y-copiarlo-a-la-pc/
 
