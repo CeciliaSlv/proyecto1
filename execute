@@ -1,4 +1,5 @@
 #!/bin/bash
+#Esta en proceso de quedar!!
 sudo su
 cp fwusb.sh /etc/init.d/
 chmod ug+x /etc/init.d/fwusb.sh
