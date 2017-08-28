@@ -1,11 +1,12 @@
 # proyecto1
 Primer proyecto de linux
 
+
 #	@file firewall.sh,fwusb.sh, execute.sh, Blacklist.txt, Whitelist.txt
 #	@Author Francisco Pablo, Rodrigo (14) && Cecilia (n) F.I.
-  Ing. Computación
-  PROTECO
-  PROTECO GENERACION 35
+#  Ing. Computación
+#  PROTECO
+#  PROTECO GENERACION 35
 #	@date 26/08/17
 #	@brief Script para controlar el montaje de dispositivos USB
 
